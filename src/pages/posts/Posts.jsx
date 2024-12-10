@@ -23,6 +23,28 @@ export default function Posts() {
 
 
 
+    // funzione per eliminare un post 
+
+    function deletePost(post) {
+        // setPosts(posts.filter(post => post !== currentPost))
+
+
+
+        axios.delete(`${BASE_URI}/posts/${post.id}`)
+            .then((res) => {
+                fetchPosts()
+
+
+            })
+            .catch(err => {
+                console.log(err)
+            })
+
+
+    }
+
+
+
     return (
         <main>
             <section>

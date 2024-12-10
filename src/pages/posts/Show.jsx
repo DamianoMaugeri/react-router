@@ -33,7 +33,7 @@ export default function Show() {
             {post ?
                 <>
                     <div className="container">
-                        <button onClick={() => navigate(-1)}>Indietro</button>
+                        <button onClick={() => navigate('/posts')}>Indietro</button>
                         {post.prevId !== null && <button onClick={() => navigate('/posts/' + post.prevId)}>post Precedente</button>}
                         {post.nextId !== null && <button onClick={() => navigate('/posts/' + post.nextId)}>Post Successivo </button>}
                         {/* {post && <Delete id={post.id} onDelete={() => { navigate('/posts') }}/>} */}
