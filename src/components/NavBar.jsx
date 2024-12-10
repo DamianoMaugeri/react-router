@@ -9,7 +9,7 @@ export default function NavBar() {
                     <NavLink to='/'>Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/aboutme'>About Me</NavLink>
+                    <NavLink to='/about-me'>About Me</NavLink>
                 </li>
                 <li>
                     <NavLink to='/posts'>Posts</NavLink>
