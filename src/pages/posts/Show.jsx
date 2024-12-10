@@ -20,6 +20,20 @@ export default function Show() {
 
 
 
+    function deletePost() {
+        axios.delete(`${BASE_URI}/posts/${id}`)
+            .then((res) => {
+                navigate('/posts')
+
+            })
+            .catch(err => {
+                console.log(err)
+            })
+
+    }
+
+
+
 
 
 
@@ -37,6 +51,7 @@ export default function Show() {
                         {post.prevId !== null && <button onClick={() => navigate('/posts/' + post.prevId)}>post Precedente</button>}
                         {post.nextId !== null && <button onClick={() => navigate('/posts/' + post.nextId)}>Post Successivo </button>}
                         {/* {post && <Delete id={post.id} onDelete={() => { navigate('/posts') }}/>} */}
+                        <button onClick={deletePost} > Elimina</button>
                     </div>
 
                     <section>
